@@ -19,91 +19,91 @@ const nextBtn3 = document.querySelector("#next-btn3");
 let success;
 
 setTimeout(() => {
-	page1.classList.add("hidden");
-	page2.classList.remove("hidden");
-	setTimeout(() => {
-		page2.classList.add("hidden");
-		page3.classList.remove("hidden");
-	}, 5000);
+  page1.classList.add("hidden");
+  page2.classList.remove("hidden");
+  setTimeout(() => {
+    page2.classList.add("hidden");
+    page3.classList.remove("hidden");
+  }, 5000);
 }, 3000);
 
 nextBtn1.addEventListener("click", function () {
-	page3.classList.add("hidden");
-	page4.classList.remove("hidden");
+  page3.classList.add("hidden");
+  page4.classList.remove("hidden");
 });
 
 nextBtn2.addEventListener("click", function () {
-	page4.classList.add("hidden");
-	page5.classList.remove("hidden");
+  page4.classList.add("hidden");
+  page5.classList.remove("hidden");
 });
 
 nextBtn3.addEventListener("click", function () {
-	page5.classList.add("hidden");
-	mainCont.classList.remove("hidden");
+  page5.classList.add("hidden");
+  mainCont.classList.remove("hidden");
 });
 
 if (localStorage.auto !== undefined) {
-	const obj = JSON.parse(localStorage.auto);
-	email.value = obj.email;
-	password.value = obj.password;
-	signInBtn.classList.remove("btn-inactive");
-	signInBtn.classList.add("btn-active");
+  const obj = JSON.parse(localStorage.auto);
+  email.value = obj.email;
+  password.value = obj.password;
+  signInBtn.classList.remove("btn-inactive");
+  signInBtn.classList.add("btn-active");
 }
 
 signInBtn.addEventListener("click", async function () {
-	if (!this.classList.contains("btn-inactive")) {
-		success = false;
-		loading.classList.remove("hidden");
-		const res = await fetch(
-			"https://63501a98df22c2af7b637037.mockapi.io/users"
-		);
-		const data = await res.json();
-		// console.log(data);
-		for (let i = 0; i < data.length; i++) {
-			if (
-				data[i].email === email.value &&
-				data[i].password === password.value
-			) {
-				if (remember.checked) {
-					localStorage.setItem(
-						"auto",
-						JSON.stringify({ email: email.value, password: password.value })
-					);
-				}
-				success = true;
-				localStorage.setItem("user", JSON.stringify(data[i]));
-				loading.classList.add("hidden");
-				window.location = "../Home/index.html";
-			}
-		}
-		if (!success) {
-			loading.classList.add("hidden");
-			failure.classList.remove("hidden");
-			setTimeout(() => {
-				failure.classList.add("hidden");
-			}, 2000);
-		}
-		// console.log("Not Registered!!!");
-		// console.log(localStorage);
-	}
+  if (!this.classList.contains("btn-inactive")) {
+    success = false;
+    loading.classList.remove("hidden");
+    const res = await fetch(
+      "https://63501a98df22c2af7b637037.mockapi.io/users"
+    );
+    const data = await res.json();
+    // console.log(data);
+    for (let i = 0; i < data.length; i++) {
+      if (
+        data[i].email === email.value &&
+        data[i].password === password.value
+      ) {
+        if (remember.checked) {
+          localStorage.setItem(
+            "auto",
+            JSON.stringify({ email: email.value, password: password.value })
+          );
+        }
+        success = true;
+        localStorage.setItem("user", JSON.stringify(data[i]));
+        loading.classList.add("hidden");
+        window.location = "../home.html";
+      }
+    }
+    if (!success) {
+      loading.classList.add("hidden");
+      failure.classList.remove("hidden");
+      setTimeout(() => {
+        failure.classList.add("hidden");
+      }, 2000);
+    }
+    // console.log("Not Registered!!!");
+    // console.log(localStorage);
+  }
 });
 
 email.addEventListener("input", btnActivation);
 password.addEventListener("input", btnActivation);
 
 function btnActivation() {
-	if (
-		(email.value === "" || password.value === "") &&
-		signInBtn.classList.contains("btn-active")
-	) {
-		signInBtn.classList.add("btn-inactive");
-		signInBtn.classList.remove("btn-active");
-	} else if (
-		email.value !== "" &&
-		password.value !== "" &&
-		signInBtn.classList.contains("btn-inactive")
-	) {
-		signInBtn.classList.remove("btn-inactive");
-		signInBtn.classList.add("btn-active");
-	}
+  if (
+    (email.value === "" || password.value === "") &&
+    signInBtn.classList.contains("btn-active")
+  ) {
+    signInBtn.classList.add("btn-inactive");
+    signInBtn.classList.remove("btn-active");
+  } else if (
+    email.value !== "" &&
+    password.value !== "" &&
+    signInBtn.classList.contains("btn-inactive")
+  ) {
+    signInBtn.classList.remove("btn-inactive");
+    signInBtn.classList.add("btn-active");
+  }
 }
