@@ -15,6 +15,7 @@ const mainCont = document.querySelector(".main-container");
 const nextBtn1 = document.querySelector("#next-btn1");
 const nextBtn2 = document.querySelector("#next-btn2");
 const nextBtn3 = document.querySelector("#next-btn3");
+const hint = document.querySelector(".hint");
 
 let success;
 
@@ -40,6 +41,11 @@ nextBtn2.addEventListener("click", function () {
 nextBtn3.addEventListener("click", function () {
   page5.classList.add("hidden");
   mainCont.classList.remove("hidden");
+  hint.classList.remove("hidden");
+  setTimeout(() => {
+    hint.style.opacity = "0";
+    hint.style.backgroundColor = "black";
+  }, 3000);
 });
 
 if (localStorage.auto !== undefined) {
