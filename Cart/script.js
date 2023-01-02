@@ -60,7 +60,7 @@ async function getData() {
 			<div class="content">
 				<div class="div1">
 					<h3>${proData.title}</h3>
-					<img src="../Assets/trash-icon.png" alt="trash-icon" class="trash" />
+					<img src="./Assets/trash-icon.png" alt="trash-icon" class="trash" />
 				</div>
 				<div class="div2">
 					<div style = "background-color: ${userData.cart[i].color};"></div>
