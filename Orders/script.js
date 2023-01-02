@@ -9,6 +9,7 @@ const homeIcon = document.querySelector("#home-icon");
 const cartIcon = document.querySelector("#cart-icon");
 const navBar = document.querySelector(".nav-bar");
 const searchIcon = document.querySelector("#search-icon");
+const hint = document.querySelector(".hint");
 
 loading.classList.remove("hidden");
 navBar.style.left = `${(document.documentElement.clientWidth - 360) / 2}px`;
@@ -85,6 +86,12 @@ async function getData() {
     }
   }
   loading.classList.add("hidden");
+
+  hint.classList.remove("hidden");
+  setTimeout(() => {
+    hint.style.opacity = "0";
+    hint.style.backgroundColor = "black";
+  }, 3000);
 }
 
 activeTab.addEventListener("click", function () {
