@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="shortcut icon"
+			href="../Assets/shortcut-icon.png"
+			type="image/x-icon"
+		/>
+		<title>Home</title>
+	</head>
+	<body>
+		<div class="main-container">
+			<div class="head-bar">
+				<div class="user-info">
+					<img
+						src="https://picsum.photos/40?random=1"
+						alt="user-avatar"
+						id="user-avatar"
+					/>
+					<div>
+						<p>Good Morning👋</p>
+						<h4 id="user-name">Hossein Yadegari</h4>
+					</div>
+				</div>
+				<div class="icons">
+					<img
+						src="../Assets/bell-icon.png"
+						alt="notification-icon"
+						id="bell-icon"
+					/>
+					<img src="../Assets/heart-icon.png" alt="like-icon" id="heart-icon" />
+				</div>
+			</div>
+			<input type="text" placeholder="Search" id="search-input" />
+			<div class="brands">
+				<div>
+					<div><img src="../Assets/nike-icon.png" alt="nike-logo" /></div>
+					<p>Nike</p>
+				</div>
+				<div>
+					<div><img src="../Assets/adidas-icon.png" alt="" /></div>
+					<p>Adidas</p>
+				</div>
+				<div>
+					<div><img src="../Assets/puma-icon.png" alt="" /></div>
+					<p>Puma</p>
+				</div>
+				<div>
+					<div><img src="../Assets/asics-icon.png" alt="" /></div>
+					<p>Asics</p>
+				</div>
+				<div>
+					<div><img src="../Assets/reebok-icon.png" alt="" /></div>
+					<p>Reebok</p>
+				</div>
+				<div>
+					<div><img src="../Assets/new-balance-icon.png" alt="" /></div>
+					<p>New Ba..</p>
+				</div>
+				<div>
+					<div><img src="../Assets/converse-icon.png" alt="" /></div>
+					<p>Converse</p>
+				</div>
+				<div>
+					<div><img src="../Assets/more-icon.png" alt="" /></div>
+					<p>More...</p>
+				</div>
+			</div>
+			<div class="show-bar">
+				<h3>Most Popular</h3>
+				<p id="see-all">See All</p>
+			</div>
+			<div class="show-brands">
+				<div class="active" id="b0">All</div>
+				<div id="b1">Nike</div>
+				<div id="b2">Adidas</div>
+				<div id="b3">Puma</div>
+				<div id="b4">Asics</div>
+				<div id="b5">Reebok</div>
+				<div id="b6">New Balance</div>
+				<div id="b7">Converse</div>
+				<div id="b8">Alaki1</div>
+				<div id="b9">Alaki2</div>
+			</div>
+			<div class="show-products">
+				<!-- pp = popular product -->
+				<!-- ppic = popular product image container -->
+				<div id="pp0" class="pp">
+					<div class="ppic"><img /></div>
+					<h3></h3>
+					<p></p>
+				</div>
+				<div id="pp1" class="pp">
+					<div class="ppic"><img /></div>
+					<h3></h3>
+					<p></p>
+				</div>
+				<div id="pp2" class="pp">
+					<div class="ppic"><img /></div>
+					<h3></h3>
+					<p></p>
+				</div>
+				<div id="pp3" class="pp">
+					<div class="ppic"><img /></div>
+					<h3></h3>
+					<p></p>
+				</div>
+				<div id="pp4" class="pp">
+					<div class="ppic"><img /></div>
+					<h3></h3>
+					<p></p>
+				</div>
+				<div id="pp5" class="pp">
+					<div class="ppic"><img /></div>
+					<h3></h3>
+					<p></p>
+				</div>
+			</div>
+		</div>
+		<div class="nav-bar">
+			<div>
+				<img src="../Assets/home-active-icon.png" alt="" />
+				<p>Home</p>
+			</div>
+			<div id="cart-icon">
+				<img src="../Assets/cart-inactive-icon.png" alt="" />
+				<p>Cart</p>
+			</div>
+			<div id="orders-icon">
+				<img src="../Assets/order-inactive-icon.png" alt="" />
+				<p>Orders</p>
+			</div>
+		</div>
+		<div class="overlay hidden" id="loading">
+			<h1>Loading... !</h1>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

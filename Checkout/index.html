@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="shortcut icon"
+			href="../Assets/shortcut-icon.png"
+			type="image/x-icon"
+		/>
+		<title>Checkout</title>
+	</head>
+	<body>
+		<div class="main-container">
+			<div class="header">
+				<img src="../Assets/back-icon.png" alt="back-icon" class="back" />
+				<h3>Checkout</h3>
+			</div>
+
+			<div class="address">
+				<h4>Shipping Address</h4>
+				<div class="chosen-address">
+					<div>
+						<div class="loc">
+							<img src="../Assets/location-icon.png" alt="" />
+						</div>
+						<div class="add">
+							<p>Home</p>
+							<p>61480 Sunbroke Park, PC 5679</p>
+						</div>
+					</div>
+					<img src="../Assets/edit-icon.png" alt="" id="edit-icon" />
+				</div>
+			</div>
+
+			<div class="orders">
+				<h4>Order List</h4>
+				<!-- <div id="pro1" class="pro">
+          <div class="img-container">
+            <img src="https://picsum.photos/70" alt="shoe-img" />
+          </div>
+          <div class="content">
+            <div class="div1">
+              <h3>Running Sportwear</h3>
+            </div>
+            <div class="div2">
+              <div style="background-color: black"></div>
+              <p>size = 41</p>
+            </div>
+            <div class="div3">
+              <p>$105.00</p>
+              <div>
+                <p id="count">3</p>
+              </div>
+            </div>
+          </div>
+        </div> -->
+			</div>
+
+			<div class="shipping">
+				<h4>Choose Shipping</h4>
+				<div class="choose-shipping-div">
+					<div>
+						<img src="../Assets/truck-icon.png" alt="" />
+						<p>Choose Shipping Type</p>
+					</div>
+					<h2>&gt;</h2>
+				</div>
+
+				<div class="ship-type hidden">
+					<div>
+						<div class="ship-icon-cont">
+							<img src="../Assets/truck-icon.png" alt="" />
+						</div>
+						<div class="ship-info">
+							<p>Economy</p>
+							<p>Estimated Arrival: Dec 20-23</p>
+						</div>
+					</div>
+					<p>$10</p>
+					<img src="../Assets/edit-icon.png" alt="" class="ship-edit" />
+				</div>
+
+				<div class="ship-type hidden">
+					<div>
+						<div class="ship-icon-cont">
+							<img src="../Assets/truck-icon.png" alt="" />
+						</div>
+						<div class="ship-info">
+							<p>Regular</p>
+							<p>Estimated Arrival: Dec 20-22</p>
+						</div>
+					</div>
+					<p>$15</p>
+					<img src="../Assets/edit-icon.png" alt="" class="ship-edit" />
+				</div>
+
+				<div class="ship-type hidden">
+					<div>
+						<div class="ship-icon-cont">
+							<img src="../Assets/truck-icon.png" alt="" />
+						</div>
+						<div class="ship-info">
+							<p>Cargo</p>
+							<p>Estimated Arrival: Dec 19-20</p>
+						</div>
+					</div>
+					<p>$20</p>
+					<img src="../Assets/edit-icon.png" alt="" class="ship-edit" />
+				</div>
+
+				<div class="ship-type hidden">
+					<div>
+						<div class="ship-icon-cont">
+							<img src="../Assets/truck-icon.png" alt="" />
+						</div>
+						<div class="ship-info">
+							<p>Express</p>
+							<p>Estimated Arrival: Dec 18-19</p>
+						</div>
+					</div>
+					<p>$30</p>
+					<img src="../Assets/edit-icon.png" alt="" class="ship-edit" />
+				</div>
+			</div>
+
+			<div class="promo">
+				<h4>Promo Code</h4>
+				<div>
+					<input
+						type="text"
+						placeholder="Enter promo1 or promo2"
+						class=""
+						id="promo-input"
+					/>
+					<p class="active-promo hidden" id="promo1">
+						Discount 30% Off
+						<span class="clear-promo" id="clear-promo1">&Cross;</span>
+					</p>
+					<p class="active-promo hidden" id="promo2">
+						Discount 25% Off
+						<span class="clear-promo" id="clear-promo2">&Cross;</span>
+					</p>
+					<button class="" id="add-promo-btn">+</button>
+				</div>
+				<p id="wrong-code" class="hidden"></p>
+			</div>
+
+			<div class="cost">
+				<div class="cost-cont">
+					<div>
+						<p>Amount</p>
+						<p id="amount">0</p>
+					</div>
+					<div>
+						<p>Shipping</p>
+						<p id="shipping-cost">0</p>
+					</div>
+					<div id="hidden" class="promo-const-cont">
+						<p>Promo</p>
+						<p id="promo-cost">- $175.00</p>
+					</div>
+					<div>
+						<p>Total</p>
+						<p id="total">0</p>
+					</div>
+				</div>
+			</div>
+
+			<button class="go-to-payment-btn">Continue to Payment</button>
+		</div>
+
+		<!-- -------------------------------------------------------------------------------------------------- -->
+
+		<div class="choose-address-cont hidden">
+			<div class="add-header">
+				<img src="../Assets/back-icon.png" alt="back-icon" class="add-back" />
+				<h3>Shipping Address</h3>
+			</div>
+
+			<div class="add-address">
+				<div>
+					<div class="add-loc">
+						<img src="../Assets/location-icon.png" alt="" />
+					</div>
+					<div class="add-add">
+						<p>Home</p>
+						<p>61480 Sunbroke Park, PC 5679</p>
+					</div>
+				</div>
+				<div class="outer-point">
+					<div class="inner-point"></div>
+				</div>
+			</div>
+
+			<div class="add-address">
+				<div>
+					<div class="add-loc">
+						<img src="../Assets/location-icon.png" alt="" />
+					</div>
+					<div class="add-add">
+						<p>Office</p>
+						<p>6993 Meadow Valley Terra, PC 3637</p>
+					</div>
+				</div>
+				<div class="outer-point">
+					<div class="inner-point hidden"></div>
+				</div>
+			</div>
+
+			<div class="add-address">
+				<div>
+					<div class="add-loc">
+						<img src="../Assets/location-icon.png" alt="" />
+					</div>
+					<div class="add-add">
+						<p>Aparatment</p>
+						<p>21833 Clyde Gallagher, PC 4662</p>
+					</div>
+				</div>
+				<div class="outer-point">
+					<div class="inner-point hidden"></div>
+				</div>
+			</div>
+
+			<div class="add-address">
+				<div>
+					<div class="add-loc">
+						<img src="../Assets/location-icon.png" alt="" />
+					</div>
+					<div class="add-add">
+						<p>Parent's House</p>
+						<p>5259 Blue Bill Park, PC 4627</p>
+					</div>
+				</div>
+				<div class="outer-point">
+					<div class="inner-point hidden"></div>
+				</div>
+			</div>
+			<button id="add-new-address-btn">Add New Address</button>
+			<button id="add-apply-btn">Apply</button>
+		</div>
+
+		<!-- ---------------------------------------------------------------------------------------- -->
+
+		<div class="shipping-type-cont hidden">
+			<div class="ship-header">
+				<img src="../Assets/back-icon.png" alt="back-icon" class="ship-back" />
+				<h3>Choose Shipping</h3>
+			</div>
+
+			<div class="ship-type" id="s1">
+				<div>
+					<div class="ship-icon-cont">
+						<img src="../Assets/truck-icon.png" alt="" />
+					</div>
+					<div class="ship-info">
+						<p>Economy</p>
+						<p>Estimated Arrival: Dec 20-23</p>
+					</div>
+				</div>
+				<p>$10</p>
+				<div class="ship-outer-point">
+					<div class="ship-inner-point hidden"></div>
+				</div>
+			</div>
+
+			<div class="ship-type" id="s2">
+				<div>
+					<div class="ship-icon-cont">
+						<img src="../Assets/truck-icon.png" alt="" />
+					</div>
+					<div class="ship-info">
+						<p>Regular</p>
+						<p>Estimated Arrival: Dec 20-22</p>
+					</div>
+				</div>
+				<p>$15</p>
+				<div class="ship-outer-point">
+					<div class="ship-inner-point"></div>
+				</div>
+			</div>
+
+			<div class="ship-type" id="s3">
+				<div>
+					<div class="ship-icon-cont">
+						<img src="../Assets/truck-icon.png" alt="" />
+					</div>
+					<div class="ship-info">
+						<p>Cargo</p>
+						<p>Estimated Arrival: Dec 19-20</p>
+					</div>
+				</div>
+				<p>$20</p>
+				<div class="ship-outer-point">
+					<div class="ship-inner-point hidden"></div>
+				</div>
+			</div>
+
+			<div class="ship-type" id="s4">
+				<div>
+					<div class="ship-icon-cont">
+						<img src="../Assets/truck-icon.png" alt="" />
+					</div>
+					<div class="ship-info">
+						<p>Express</p>
+						<p>Estimated Arrival: Dec 18-19</p>
+					</div>
+				</div>
+				<p>$30</p>
+				<div class="ship-outer-point">
+					<div class="ship-inner-point hidden"></div>
+				</div>
+			</div>
+
+			<button id="ship-apply-btn">Apply</button>
+		</div>
+
+		<!-- --------------------------------------------------------------- -->
+
+		<div class="choose-payment-cont hidden">
+			<div class="pay-header">
+				<img src="../Assets/back-icon.png" alt="back-icon" class="pay-back" />
+				<h3>Payment Methods</h3>
+			</div>
+
+			<p id="pay-more-info">Select the payment method you want to use.</p>
+
+			<div class="pay-type" id="p1">
+				<div>
+					<img src="../Assets/wallet-icon.png" alt="" />
+					<p>My Wallet</p>
+				</div>
+				<p>$9.379</p>
+				<div class="pay-outer-point">
+					<div class="pay-inner-point"></div>
+				</div>
+			</div>
+
+			<div class="pay-type" id="p2">
+				<div>
+					<img src="../Assets/paypal-icon.png" alt="" />
+					<p>PayPal</p>
+				</div>
+				<div class="pay-outer-point">
+					<div class="pay-inner-point hidden"></div>
+				</div>
+			</div>
+
+			<div class="pay-type" id="p3">
+				<div>
+					<img src="../Assets/google-icon.png" alt="" />
+					<p>Google Pay</p>
+				</div>
+				<div class="pay-outer-point">
+					<div class="pay-inner-point hidden"></div>
+				</div>
+			</div>
+
+			<div class="pay-type" id="p4">
+				<div>
+					<img src="../Assets/apple-icon.png" alt="" />
+					<p>Apple pay</p>
+				</div>
+				<div class="pay-outer-point">
+					<div class="pay-inner-point hidden"></div>
+				</div>
+			</div>
+
+			<div class="pay-type" id="p5">
+				<div>
+					<img src="../Assets/mastercard-icon.png" alt="" />
+					<p>.... .... .... 4679</p>
+				</div>
+				<div class="pay-outer-point">
+					<div class="pay-inner-point hidden"></div>
+				</div>
+			</div>
+
+			<button id="pay-apply-btn">Confirm Payment</button>
+		</div>
+
+		<!-- ----------------------------------------------------------------- -->
+
+		<div class="overlay hidden" id="loading">
+			<h1>Loading... !</h1>
+		</div>
+
+		<div class="overlay hidden" id="bg"></div>
+
+		<div class="modal hidden">
+			<h2>You Orderd successfully.</h2>
+			<button id="go-to-orders">Go to Orders</button>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

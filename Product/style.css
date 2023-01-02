@@ -1,0 +1,216 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+		"Lucida Sans", Arial, sans-serif;
+}
+
+.main-container {
+	width: 360px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.back {
+	position: absolute;
+	width: 16px;
+	height: 14px;
+	left: 20px;
+	top: 15px;
+	cursor: not-allowed;
+}
+
+.pr-img {
+	background-color: #f3f3f3;
+	padding: 50px;
+}
+
+.pr-img img {
+	width: 260px;
+	height: 260px;
+}
+
+.content {
+	padding: 0 10px 35px 10px;
+}
+
+.title {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 30px 0 15px 0;
+	border-bottom: 1px solid #c7c7c7;
+	padding-bottom: 10px;
+}
+
+.ti img {
+	width: 24px;
+	height: 22.5 px;
+}
+
+.des {
+	margin-bottom: 15px;
+}
+
+.des h3 {
+	margin-bottom: 15px;
+}
+
+.size div {
+	display: flex;
+	gap: 10px;
+}
+
+.size h3 {
+	margin-bottom: 7px;
+}
+
+.size div div {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #101010;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.size div .active {
+	background-color: #101010;
+	color: white;
+}
+
+.color h3 {
+	margin-bottom: 7px;
+}
+
+.color div {
+	display: flex;
+	gap: 10px;
+}
+
+.color div div {
+	width: 40px;
+	height: 40px;
+	/* border: 1px solid #101010; */
+	border-radius: 20px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.color div div img {
+	width: 20px;
+	height: 20px;
+}
+
+.color div div:nth-child(1) {
+	background-color: #f3f3f3;
+}
+
+.color div div:nth-child(2) {
+	background-color: #607e89;
+}
+
+.color div div:nth-child(3) {
+	background-color: #9d28ac;
+}
+
+.color div div:nth-child(4) {
+	background-color: #7a5449;
+}
+
+.color div div:nth-child(5) {
+	background-color: #1c95ee;
+}
+
+.color div div:nth-child(6) {
+	background-color: aqua;
+}
+
+.s-c {
+	display: flex;
+	gap: 25px;
+	margin-bottom: 15px;
+	overflow: scroll;
+}
+
+.s-c::-webkit-scrollbar {
+	display: none;
+}
+
+.quantity {
+	display: flex;
+	gap: 20px;
+	align-items: center;
+	margin-bottom: 15px;
+	padding-bottom: 15px;
+	border-bottom: 1px solid #c7c7c7;
+}
+
+.quantity div {
+	background-color: #f3f3f3;
+	border-radius: 15px;
+	display: flex;
+	gap: 20px;
+	padding: 10px 20px;
+}
+
+.quantity div #plus,
+.quantity div #minus {
+	cursor: pointer;
+}
+
+.price {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.price p {
+	font-size: 12px;
+	color: #a1a1a1;
+	margin-bottom: 5px;
+}
+
+.price button {
+	border: none;
+	padding: 15px 60px;
+	color: white;
+	border-radius: 20px;
+}
+
+.price .btn-active {
+	background-color: #101010;
+	cursor: pointer;
+}
+
+.price .btn-inactive {
+	background-color: #707175;
+	cursor: not-allowed;
+}
+
+.hidden {
+	display: none;
+}
+
+.overlay {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	backdrop-filter: blur(10px);
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+#loading h1 {
+	background-color: white;
+	text-align: center;
+	padding: 30px 0;
+	width: 80%;
+	margin: 50px auto 0 auto;
+	border-radius: 15px;
+}
