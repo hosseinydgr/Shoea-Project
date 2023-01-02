@@ -73,7 +73,7 @@ signInBtn.addEventListener("click", async function () {
         success = true;
         localStorage.setItem("user", JSON.stringify(data[i]));
         loading.classList.add("hidden");
-        window.location = "../home.html";
+        window.location = "./home.html";
       }
     }
     if (!success) {
